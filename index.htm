@@ -38,14 +38,8 @@
 
     <div class="container">
       <div ng-controller="mainController">
-        <form name="myForm">
-			<input type="text" ng-model="field" name="myField" required minlength="5" />
-			<div ng-messages="myForm.myField.$error">
-				<div class="alert alert-danger" ng-message="required">You did not enter a field</div>
-				<div class="alert alert-danger" ng-message="minlength">The value entered is too short</div>
-			</div>
-		  </form>
-      </div>
+        <h1>Testing Dependency Injection</h1>
+		  <h1>Hello {{ name + '. How are you?'}}</h1>
     </div>
 
     </body>
