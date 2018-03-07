@@ -36,20 +36,23 @@
             </nav>
 		</header>
 
-    <div class="container">
-      <div ng-controller="mainController">
-        <h1>Directive Testing</h1>
-		<div>
-		  <label>What is your twitter handle?</label>
-		  <input type="text" ng-model="handle" />
+		<div class="container">
+		  <div ng-controller="mainController">
+			<h1>Directive Testing</h1>
+			<div>
+			  <label>What is your twitter handle?</label>
+			  <input type="text" ng-model="handle" />
+			</div>
+			<h3>Rules</h3>
+				<ul>
+					<li ng-repeat="rule in rules">
+						{{ rule.rulename }}
+					</li>
+				</ul>
+			<hr />
+			<h1>twitter.com/{{ lowercasehandle() }}</h1>
+
 		</div>
-		<div class="alert" ng-if="handle.length < 5" >
-			Must be 5 characters!
-		</div>
-		<hr />
-		<h1>twitter.com/{{ lowercasehandle() }}</h1>
-		  
-    </div>
 
     </body>
 </html>

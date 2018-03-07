@@ -5,9 +5,20 @@ myApp.controller('mainController', ['$scope', '$filter', function($scope, $filte
 	$scope.handle = '';
 	$scope.lowercasehandle = function(){
 		
-		return $filter('lowercase')($scope.handle);	
-	
+		return $filter('lowercase')($scope.handle);
+
 	};
+	
+	$scope.characters = 5;
+		$scope.rules = [
+			{ rulename: "Must be 5 characters" },
+			{ rulename: "Must not be used elsewhere" },
+			{ rulename: "Must be l33t" }
+			
+		];
+		
+	console.log($scope.rules);
+	
 //	$scope.$watch('handle', function(newValue, oldValue){
 //		
 //		console.info('Changed!');
