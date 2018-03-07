@@ -41,7 +41,7 @@
 			<input type="text" ng-model="field" name="myField" required minlength="5" />
 			<div ng-messages="myForm.myField.$error">
 				<div class="alert alert-danger" ng-message="required">You did not enter a field</div>
-				<div ng-message="minlength">The value entered is too short</div>
+				<div class="alert alert-danger" ng-message="minlength">The value entered is too short</div>
 			</div>
 		  </form>
       </div>
