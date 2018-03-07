@@ -2,22 +2,28 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('mainController', ['$scope', '$filter', function($scope, $filter){
 
-	$scope.handle = '';
-	$scope.lowercasehandle = function(){
+	$scope.alertClick = function(){
 		
-		return $filter('lowercase')($scope.handle);
-
+		alert("Clicked!");
+		
 	};
 	
-	$scope.characters = 5;
-		$scope.rules = [
-			{ rulename: "Must be 5 characters" },
-			{ rulename: "Must not be used elsewhere" },
-			{ rulename: "Must be l33t" }
-			
-		];
-		
-	console.log($scope.rules);
+//	$scope.handle = '';
+//	$scope.lowercasehandle = function(){
+//		
+//		return $filter('lowercase')($scope.handle);
+//
+//	};
+//	
+//	$scope.characters = 5;
+//		$scope.rules = [
+//			{ rulename: "Must be 5 characters" },
+//			{ rulename: "Must not be used elsewhere" },
+//			{ rulename: "Must be l33t" }
+//			
+//		];
+//		
+//	console.log($scope.rules);
 	
 //	$scope.$watch('handle', function(newValue, oldValue){
 //		

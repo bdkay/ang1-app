@@ -37,21 +37,9 @@
 		</header>
 
 		<div class="container">
-		  <div ng-controller="mainController">
-			<h1>Directive Testing</h1>
-			<div>
-			  <label>What is your twitter handle?</label>
-			  <input type="text" ng-model="handle" />
+			<div ng-controller="mainController">
+				<input type="button" value="Click Me" ng-click="alertClick()" />
 			</div>
-			<h3>Rules</h3>
-				<ul>
-					<li ng-repeat="rule in rules">
-						{{ rule.rulename }}
-					</li>
-				</ul>
-			<hr />
-			<h1>twitter.com/{{ lowercasehandle() }}</h1>
-
 		</div>
 
     </body>
