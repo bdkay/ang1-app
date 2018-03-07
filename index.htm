@@ -43,7 +43,7 @@
 		  <label>What is your twitter handle?</label>
 		  <input type="text" ng-model="handle" />
 		</div>
-		<div class="alert" ng-show="handle.length < 5" >
+		<div class="alert" ng-if="handle.length < 5" >
 			Must be 5 characters!
 		</div>
 		<hr />
