@@ -1,9 +1,34 @@
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ['ngRoute']);
 
-myApp.controller('mainController', ['$scope', function($scope, $filter, $http){
+//config
+myApp.config(function($routeProvider){
+	$routeProvider
+	.when('/', {
+		templateUrl: 'pages/main.html',
+		controller: 'mainController'
+	})
+	.when('/second', {
+		templateUrl: 'pages/second.html',
+		controller: 'secondController'
+	})
+	.when('/third', {
+		templateUrl: 'pages/third.html',
+		controller: 'thirdController'
+	})
+});
 
-	$scope.name = 'Main';
-	
+//controllerz
+
+myApp.controller('secondController', ['$scope', '$log', function($scope, $log){
+
+}]);
+
+myApp.controller('thirdController', ['$scope', '$log', function($scope, $log){
+
+}]);
+
+
+// via old mainController
 //	$scope.handle = '';
 //	$scope.lowercasehandle = function(){
 //		
@@ -35,10 +60,3 @@ myApp.controller('mainController', ['$scope', function($scope, $filter, $http){
 //			console.log('Scope changed!');	
 //		})
 //	}, 3000);
-	
-}]);
-
-
-myApp.controller('secondController', ['$scope', function($scope){
-	$scope.name = 'Second';
-}]);
