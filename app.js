@@ -21,19 +21,26 @@ myApp.config(function($routeProvider){
 	})
 });
 
+//you got served
+myApp.service('nameService', function(){
+	var self = this;
+	this.name = 'John Doe';
+	this.namelength = function(){
+		return self.name.length;
+	}
+});
+
 //controllerz
 
-myApp.controller('mainController', ['$scope', '$log', function($scope, $log){
+myApp.controller('mainController', ['$scope', '$log', 'nameService', function($scope, $log, nameService){
 	$scope.name = 'Main';
-	$log.main = 'Property from main';
-	$log.log($scope);
+	$log.log(nameService.name);
+	$log.log(nameService.namelength());
 }]);
 
 myApp.controller('secondController', ['$scope', '$log', '$routeParams', function($scope, $log, $routeParams){
 	
 	$scope.num = $routeParams.num || 1;
-	$log.second = 'Property from second';
-	$log.log($scope);
 
 }]);
 
