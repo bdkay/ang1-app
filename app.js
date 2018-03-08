@@ -1,15 +1,8 @@
 var myApp = angular.module('myApp', []);
 
-myApp.controller('mainController', ['$scope', '$filter', '$http', function($scope, $filter, $http){
+myApp.controller('mainController', ['$scope', function($scope, $filter, $http){
 
-	$scope.alertClick = function(){
-		
-		alert("Clicked!");
-		
-	};
-	
-	$scope.name = 'John Doe';
-	
+	$scope.name = 'Main';
 	
 //	$scope.handle = '';
 //	$scope.lowercasehandle = function(){
@@ -43,4 +36,9 @@ myApp.controller('mainController', ['$scope', '$filter', '$http', function($scop
 //		})
 //	}, 3000);
 	
+}]);
+
+
+myApp.controller('secondController', ['$scope', function($scope){
+	$scope.name = 'Second';
 }]);
