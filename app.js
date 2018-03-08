@@ -33,12 +33,15 @@ myApp.service('nameService', function(){
 //controllerz
 
 myApp.controller('mainController', ['$scope', '$log', 'nameService', function($scope, $log, nameService){
-	$scope.name = 'Main';
+	$scope.name = nameService.name;
+	
 	$log.log(nameService.name);
 	$log.log(nameService.namelength());
+
 }]);
 
-myApp.controller('secondController', ['$scope', '$log', '$routeParams', function($scope, $log, $routeParams){
+myApp.controller('secondController', ['$scope', '$log', '$routeParams', 'nameService', function($scope, $log, $routeParams, nameService){
+	$scope.name = nameService.name;
 	
 	$scope.num = $routeParams.num || 1;
 
