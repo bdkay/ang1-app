@@ -7,7 +7,7 @@ myApp.config(function($routeProvider){
 		templateUrl: 'pages/main.html',
 		controller: 'mainController'
 	})
-	.when('/second', {
+	.when('/second/:num', {
 		templateUrl: 'pages/second.html',
 		controller: 'secondController'
 	})
@@ -20,12 +20,12 @@ myApp.config(function($routeProvider){
 //controllerz
 
 myApp.controller('mainController', ['$scope', '$log', function($scope, $log){
-	prompt = prompt("What's your name?");
-	$scope.name = prompt;
-	
+	$scope.name = 'Brendon';
 }]);
 
-myApp.controller('secondController', ['$scope', '$log', function($scope, $log){
+myApp.controller('secondController', ['$scope', '$log', '$routeParams', function($scope, $log, $routeParams){
+	
+	$scope.num = $routeParams.num;
 
 }]);
 
