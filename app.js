@@ -59,6 +59,13 @@ myApp.controller('thirdController', ['$scope', '$log', function($scope, $log){
 
 }]);
 
+myApp.directive("searchResult", function(){
+	return {
+		template: '<a href="#" class="list-group-item"><h4 class="list-group-item-heading">Steve Doe</h4><p class="list-grou-item-text">555 Main St., New York, NY 00100</p></a>',
+		replace: true
+	}
+});
+
 
 // via old mainController
 //	$scope.handle = '';
