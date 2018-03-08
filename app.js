@@ -19,6 +19,12 @@ myApp.config(function($routeProvider){
 
 //controllerz
 
+myApp.controller('mainController', ['$scope', '$log', function($scope, $log){
+	prompt = prompt("What's your name?");
+	$scope.name = prompt;
+	
+}]);
+
 myApp.controller('secondController', ['$scope', '$log', function($scope, $log){
 
 }]);
