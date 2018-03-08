@@ -1,12 +1,15 @@
 var myApp = angular.module('myApp', []);
 
-myApp.controller('mainController', ['$scope', '$filter', function($scope, $filter){
+myApp.controller('mainController', ['$scope', '$filter', '$http', function($scope, $filter, $http){
 
 	$scope.alertClick = function(){
 		
 		alert("Clicked!");
 		
 	};
+	
+	$scope.name = 'John Doe';
+	
 	
 //	$scope.handle = '';
 //	$scope.lowercasehandle = function(){
